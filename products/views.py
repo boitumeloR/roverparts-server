@@ -15,5 +15,6 @@ class ProductDetail(APIView):
         print(json.loads(str(request.body, encoding = 'utf-8')))
         r = requests.post(url, json = json.loads(str(request.body, encoding = 'utf-8')))
         return Response(r.json())
+        
 
 
