@@ -26,6 +26,12 @@ class ProductDetail(APIView):
         r = requests.delete(url);
         return Response(r.json())
 
+class ProductCreate(APIView):
+    def post(self, request, format = None):
+        print(json.loads(str(request.body, encoding = 'utf-8')))
+        r = requests.post(main_url, json = json.loads(str(request.body, encoding = 'utf-8')))
+        return Response(r.json())
+
 
 
 
