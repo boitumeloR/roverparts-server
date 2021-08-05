@@ -7,7 +7,8 @@ import requests
 main_url = "https://b4f652c3b43475ee5b72347a36f62f19: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@roverpartsza.myshopify.com/admin/api/2021-07/products.json"
 class ProductDetail(APIView):
     def get(self, request, id, format = None):
-        r = requests.get(main_url)
+        url = f"https://b4f652c3b43475ee5b72347a36f62f19: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@roverpartsza.myshopify.com/admin/api/2021-07/products/{id}.json"
+        r = requests.get(url)
         print(r.json())
         return Response(r.json())
 
