@@ -19,5 +19,5 @@ from products.views import ProductDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/products', ProductDetail.as_view())
+    path('api/products/<int:id>', ProductDetail.as_view())
 ]
