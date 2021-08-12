@@ -33,6 +33,12 @@ class ProductCreate(APIView):
         r = requests.post(main_url, json = json.loads(str(request.body, encoding = 'utf-8')))
         return Response(r.json())
 
+    def get(self, request, format = None):
+        r = requests.get(main_url)
+        print(r.json())
+        return Response(r.json())
+
+
 
 
 
